@@ -11,6 +11,7 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [success, setSuccess] = useState<string | null>(null);
+  const [fail, setFail] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -62,7 +63,7 @@ const Contact = () => {
         fileInputRef.current.value = "";
       }
     } catch (error) {
-      setSuccess("Failed to send message. Please try again later.");
+      setFail("Failed to send message. Please try again later.");
       console.error(error);
     } finally {
       setLoading(false);
@@ -81,10 +82,11 @@ const Contact = () => {
       id="contact"
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
-      <p className="text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-12">Have a project in mind? Send us a message and we’ll get back to you shortly.</p>
+      <p className="text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-6">Have a project in mind? Send us a message and we’ll get back to you shortly.</p>
 
       <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-6 text-left">
         {success && <p className="text-center text-sm text-green-600 dark:text-green-400">{success}</p>}
+        {fail && <p className="text-center text-sm text-red-600 dark:text-red-400">{fail}</p>}
 
         {/* Name Field */}
         <div>

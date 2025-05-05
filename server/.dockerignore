@@ -1,0 +1,13 @@
+# Ignore node modules and logs
+node_modules
+*.log
+
+# Ignore environment and config files
+.DS_Store
+.env.local
+.vscode
+*.swp
+
+# Ignore build output if any
+dist
+build
