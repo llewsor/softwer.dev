@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       // "/api": "http://localhost:3001",
-      "/api": "https://api.softwer.dev",
+      //"/api": "https://api.softwer.dev/api",
     },
   },
 });

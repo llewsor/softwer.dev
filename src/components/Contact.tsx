@@ -50,7 +50,7 @@ const Contact = () => {
       formData.append("message", form.message);
       if (file) formData.append("file", file);
 
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.softwer.dev/api/contact", {
         method: "POST",
         body: formData,
       });
