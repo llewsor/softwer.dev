@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: dockerfile
     ports:
-      - "80:80"
+      - "8070:80"
     depends_on:
       - softwer.dev-server
 
