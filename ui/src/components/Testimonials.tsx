@@ -2,19 +2,16 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Maria A.",
-    title: "Product Manager",
-    message: "Softwer.dev exceeded our expectations. They delivered a clean, scalable web app with outstanding communication throughout.",
+    name: "Mario H.",
+    title: "Owner, Malta Hardware",
+    message:
+      "Softwer.dev built a unified POS + e-commerce platform for our hardware store; real-time inventory sync and streamlined checkout boosted both in-store and online sales.",
   },
   {
-    name: "David K.",
-    title: "Founder, Fintech Startup",
-    message: "Their attention to detail and dedication to performance really helped our MVP succeed. Highly recommended.",
-  },
-  {
-    name: "Sara M.",
-    title: "CTO, HealthTech Co.",
-    message: "Fast, reliable, and skilled — Softwer.dev helped us launch a modern API suite in record time.",
+    name: "Kylie S.",
+    title: "Owner, Market",
+    message:
+      "The custom e-commerce site Softwer.dev delivered let our mini shop reach customers across Malta—fast mobile experience, easy catalog management, and secure payments.",
   },
 ];
 
@@ -34,7 +31,7 @@ const Testimonials = () => {
           Real words from real people we’ve helped with design, development, and digital solutions.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}

@@ -1,18 +1,22 @@
 services:
   softwer.dev-client:
     build:
-      context: .
+      context: ./ui
       dockerfile: dockerfile
     ports:
-      - "8070:80"
+      - "3400:80"
     depends_on:
       - softwer.dev-server
 
   softwer.dev-server:
     build:
-      context: ./server
+      context: ./ui/server
       dockerfile: dockerfile
     ports:
-      - "3001:3001"
+      - "3450:3001"
     env_file:
-      - ./server/.env
+      - ./.env
+    networks:
+      default:
+        aliases:
+          - api

@@ -50,13 +50,18 @@ const Contact = () => {
       formData.append("message", form.message);
       if (file) formData.append("file", file);
 
-      const response = await fetch("https://api.softwer.dev/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         body: formData,
       });
 
-      const result = await response.json();
+      const contentType = response.headers.get("content-type") || "";
+      const result = contentType.includes("application/json") ? await response.json() : { error: await response.text() };
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message.");
+      }
       setSuccess(result.message || "Message sent!");
+      setFail(null);
       setForm({ name: "", email: "", message: "" });
       setFile(null);
       if (fileInputRef.current) {
@@ -64,7 +69,8 @@ const Contact = () => {
       }
     } catch (error) {
       setFail("Failed to send message. Please try again later.");
-      console.error(error);
+      setSuccess(null);
+      console.error(error instanceof Error ? error.message : error);
     } finally {
       setLoading(false);
     }

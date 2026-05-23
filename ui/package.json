@@ -6,7 +6,7 @@
   "scripts": {
     "dev_": "vite",
     "dev": "concurrently \"npm run server\" \"vite\"",
-    "server": "nodemon server/index.ts",
+    "server": "npm --prefix server run dev",
     "build_": "tsc -b && vite build",
     "build": "tsc -b tsconfig.app.json && vite build",
     "lint": "eslint .",

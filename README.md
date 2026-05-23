@@ -1,88 +1,66 @@
-# React + TypeScript + Vite
+# softwer.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio/contact website built with React, TypeScript, Vite, Express, and Nodemailer.
 
-Currently, two official plugins are available:
+## Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+```text
+.
+├── docker-compose.yml
+├── .env.example
+└── ui/
+    ├── src/
+    ├── server/
+    ├── dockerfile
+    └── nginx.conf
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Local Development
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
-
----
-
-## ✨ Features Added
-
-- 🌙 Light/Dark Theme Toggle with `localStorage` + `TailwindCSS` custom colors
-- 📬 Contact Form with backend API (`/api/contact`) powered by Express + Nodemailer
-- 📎 File attachments support (with multer)
-- 📩 Sends confirmation email to client + full submission to admin
-- 💬 Animated Testimonials section using `framer-motion`
-- ⚡ Smooth scroll navigation using `react-scroll`
-- 🎨 Fully responsive design with TailwindCSS
-- 🚀 Runs both client (Vite) and server (Nodemon + ts-node) concurrently
-
----
-
-## 🛠 Backend Setup
-
-- Location: `/server`
-- Config: `MAIL_USER`, `MAIL_PASS`, `MAIL_TO`, `MAIL_ADMIN` in `.env`
-- Start both client and server:
+Install and run the UI/dev server from the app folder:
 
 ```bash
+cd ui
+npm install
 npm run dev
 ```
 
-Make sure `.env` is located in the `/server` directory.
+## Docker Deployment
 
----
+Use the same layout as your other apps:
 
-## 📦 Technologies
+```text
+/opt/apps/portfolio/
+├── docker-compose.yml
+├── .env
+└── ui/
+```
+
+Create `.env` from `.env.example` beside `docker-compose.yml`:
+
+```bash
+MAIL_USER=
+MAIL_PASS=
+CORS_ORIGINS=https://softwer.dev,https://www.softwer.dev
+```
+
+Then run:
+
+```bash
+docker compose up -d --build
+```
+
+## Features
+
+- Light/dark theme toggle with `localStorage` and TailwindCSS custom colors
+- Contact form with backend API (`/api/contact`) powered by Express and Nodemailer
+- File attachment support with `multer`
+- Confirmation email to the client plus full submission to admin
+- Animated testimonials using `framer-motion`
+- Smooth scroll navigation using `react-scroll`
+- Responsive design with TailwindCSS
+
+## Technologies
 
 - React + TypeScript
 - Vite
@@ -91,5 +69,3 @@ Make sure `.env` is located in the `/server` directory.
 - Nodemailer
 - Framer Motion
 - React Scroll
-
----

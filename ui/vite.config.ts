@@ -7,8 +7,7 @@ export default defineConfig({
   plugins: [tailwindcss(), react()],
   server: {
     proxy: {
-      // "/api": "http://localhost:3001",
-      //"/api": "https://api.softwer.dev/api",
+      "/api": "http://localhost:3001",
     },
   },
 });
