@@ -7,6 +7,9 @@ import Contact from "./components/Contact";
 import { useEffect } from "react";
 import About from "./components/About";
 import Testimonials from "./components/Testimonials";
+import Engagements from "./components/Engagements";
+import Process from "./components/Process";
+import Footer from "./components/Footer";
 
 function App() {
   // Read theme from localStorage on first render
@@ -20,16 +23,19 @@ function App() {
   }, []);
 
   return (
-    <div className="font-sans bg-bg-light text-text-light dark:bg-bg-dark dark:text-text-dark">
+    <div className="font-sans bg-stone-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
       <Header />
-      <main className="px-4">
+      <main>
         <Hero />
         <About />
         <Services />
+        <Engagements />
         <WhyUs />
+        <Process />
         <Testimonials />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -9,50 +9,62 @@ const Header = () => {
   const { isDark, toggleTheme } = useTheme();
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const navLinks = ["About", "Services", "Why Us", "Testimonials", "Contact"];
+  const navLinks = [
+    { label: "Problems", target: "about" },
+    { label: "Services", target: "services" },
+    { label: "Plans", target: "engagements" },
+    { label: "Proof", target: "testimonials" },
+    { label: "Contact", target: "contact" },
+  ];
 
   return (
-    // <header className="w-full z-50 bg-bgLight text-textLight dark:bg-bgDark dark:text-textDark shadow-md">
-    <header className="fixed top-0 left-0 w-full z-50 bg-gray-200 dark:bg-gray-800 text-text-light dark:text-text-dark shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo & Brand */}
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-zinc-200/80 bg-stone-50/90 text-zinc-950 shadow-sm backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/90 dark:text-zinc-50">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-6">
         <div className="flex items-center gap-2 cursor-pointer">
           <Link
             to={"hero"}
             smooth={true}
             duration={500}
-            className="cursor-pointer flex items-center gap-2  hover:text-brandLight dark:hover:text-brandDark transition"
+            offset={-72}
+            className="flex cursor-pointer items-center gap-2 transition hover:text-teal-700 dark:hover:text-teal-300"
           >
             <img src={logo} alt="Softwer.dev logo" className="h-10 w-10" />
-            <span className="text-xl font-semibold">softwer.dev</span>
+            <span className="text-lg font-semibold tracking-normal">softwer.dev</span>
           </Link>
         </div>
 
-        {/* Theme Toggle */}
         <button
           onClick={toggleTheme}
-          className="fixed bottom-4 right-4 bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark border border-gray-300 dark:border-gray-600 p-2 rounded-lg hover:shadow-md transition"
+          className="fixed bottom-4 right-4 rounded-md border border-zinc-300 bg-white p-2 text-zinc-900 shadow-sm transition hover:shadow-md dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
           title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
         >
           {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
         </button>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
             <Link
-              key={link}
-              to={link.toLowerCase().replace(/\s+/g, "")}
+              key={link.target}
+              to={link.target}
               smooth={true}
               duration={500}
-              className="cursor-pointer hover:text-brandLight dark:hover:text-brandDark transition"
+              offset={-72}
+              className="cursor-pointer text-sm font-medium text-zinc-700 transition hover:text-teal-700 dark:text-zinc-300 dark:hover:text-teal-300"
             >
-              {link}
+              {link.label}
             </Link>
           ))}
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            offset={-72}
+            className="cursor-pointer rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-700 dark:bg-white dark:text-zinc-950 dark:hover:bg-teal-200"
+          >
+            Book a Call
+          </Link>
         </nav>
 
-        {/* Mobile Toggle */}
         <div className="md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle Menu">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -60,19 +72,19 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-bgLight dark:bg-bgDark px-4 pb-4 space-y-2 text-textLight dark:text-textDark">
+        <div className="space-y-2 border-t border-zinc-200 bg-stone-50 px-4 pb-4 pt-3 text-zinc-950 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 md:hidden">
           {navLinks.map((link) => (
             <Link
-              key={link}
-              to={link.toLowerCase().replace(/\s+/g, "")}
+              key={link.target}
+              to={link.target}
               smooth={true}
               duration={500}
-              className="block cursor-pointer hover:text-brandLight dark:hover:text-brandDark transition"
+              offset={-72}
+              className="block cursor-pointer rounded-md px-2 py-2 text-sm font-medium transition hover:bg-zinc-100 dark:hover:bg-zinc-900"
               onClick={() => setIsOpen(false)}
             >
-              {link}
+              {link.label}
             </Link>
           ))}
         </div>

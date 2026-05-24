@@ -41,7 +41,15 @@ Create `.env` from `.env.example` beside `docker-compose.yml`:
 ```bash
 MAIL_USER=
 MAIL_PASS=
+MAIL_TO=hello@softwer.dev
 CORS_ORIGINS=https://softwer.dev,https://www.softwer.dev
+COMPANY_NAME=softwer.dev
+COMPANY_TAGLINE=Custom software for growing businesses
+COMPANY_EMAIL=hello@softwer.dev
+COMPANY_PHONE=
+COMPANY_LOCATION=
+COMPANY_WEBSITE=https://softwer.dev
+COMPANY_LOGO_URL=https://softwer.dev/logo.png
 ```
 
 Then run:

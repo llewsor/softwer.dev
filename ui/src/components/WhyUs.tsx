@@ -1,56 +1,59 @@
-import { ShieldCheckIcon, ClockIcon, BoltIcon, LightBulbIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+import { ChartNoAxesCombined, Clock3, ShieldCheck, Wrench } from "lucide-react";
 
 const features = [
   {
-    icon: <ShieldCheckIcon className="h-8 w-8 text-brand-light dark:text-brand-dark" />,
-    title: "Reliable & Secure",
-    description: "We follow best practices to ensure your applications are stable, secure, and production-ready.",
+    icon: <ShieldCheck className="h-7 w-7" />,
+    title: "Built for production",
+    description: "Authentication, validation, error handling, logging, deployment, backups, and maintainable code are part of the work.",
   },
   {
-    icon: <ClockIcon className="h-8 w-8 text-brand-light dark:text-brand-dark" />,
-    title: "Timely Delivery",
-    description: "Projects are delivered on time, with clear communication and milestone tracking throughout.",
+    icon: <Clock3 className="h-7 w-7" />,
+    title: "Clear delivery rhythm",
+    description: "You get visible milestones, plain-English updates, and decisions surfaced early enough to keep momentum.",
   },
   {
-    icon: <BoltIcon className="h-8 w-8 text-brand-light dark:text-brand-dark" />,
-    title: "Performance Driven",
-    description: "Fast-loading apps and APIs optimized for performance, using scalable architecture patterns.",
+    icon: <ChartNoAxesCombined className="h-7 w-7" />,
+    title: "Business-first thinking",
+    description: "We care about fewer manual hours, better reporting, cleaner customer experiences, and software that pays its way.",
   },
   {
-    icon: <LightBulbIcon className="h-8 w-8 text-brand-light dark:text-brand-dark" />,
-    title: "Creative Problem Solving",
-    description: "We apply critical thinking and innovation to build smart, custom solutions that solve real problems.",
+    icon: <Wrench className="h-7 w-7" />,
+    title: "Support after launch",
+    description: "A useful product needs care after release, so we plan for monitoring, improvements, fixes, and future versions.",
   },
 ];
 
 const WhyUs = () => {
   return (
-    // <section className="bg-bg-light dark:bg-bg-dark text-text-light dark:text-text-dark py-20 px-6 text-center">
     <motion.section
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      viewport={{ once: false, amount: 0.3 }}
-      // className="min-h-screen text-center p-4 py-30"
-      className="min-h-screen flex items-center justify-center py-20 "
+      viewport={{ once: true, amount: 0.2 }}
+      className="bg-stone-50 px-4 py-20 dark:bg-zinc-950 lg:px-6"
       id="whyus"
     >
-      <div className="text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Us?</h2>
-        <p className="max-w-xl mx-auto mb-12 text-gray-600 dark:text-gray-300">
-          We don’t just build software — we build reliable, efficient, and scalable systems designed for real-world results.
-        </p>
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-teal-700 dark:text-teal-300">Why Choose Us</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-normal text-zinc-950 dark:text-white md:text-4xl">A small senior team with ownership, taste, and commercial focus.</h2>
+            <p className="mt-5 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
+              The goal is not just to write code. It is to give your business a dependable software asset that reduces friction and creates leverage.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
           {features.map((item, idx) => (
-            <div key={idx} className="flex items-start gap-4 bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-md transition">
-              {item.icon}
+            <div key={idx} className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-md bg-teal-50 text-teal-700 dark:bg-teal-950 dark:text-teal-200">{item.icon}</div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</h3>
-                <p className="text-gray-700 dark:text-gray-300">{item.description}</p>
+                <h3 className="text-lg font-semibold text-zinc-950 dark:text-white">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-zinc-700 dark:text-zinc-300">{item.description}</p>
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </motion.section>
