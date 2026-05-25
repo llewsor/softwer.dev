@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Blocks, Bot, Code2, LayoutDashboard, LifeBuoy } from "lucide-react";
+import { Blocks, Bot, CloudCog, Code2, LayoutDashboard, LifeBuoy } from "lucide-react";
 
 const services = [
   {
@@ -26,6 +26,11 @@ const services = [
     icon: <LifeBuoy className="h-7 w-7" />,
     title: "Maintenance & Technical Support",
     description: "Keep business-critical software healthy with monitoring, bug fixes, upgrades, security reviews, and ongoing improvements.",
+  },
+  {
+    icon: <CloudCog className="h-7 w-7" />,
+    title: "Cloud Deployment & DevOps",
+    description: "Deploy, monitor, and scale applications with reliable hosting, CI/CD pipelines, environment setup, and release workflows.",
   },
 ];
 
