@@ -14,6 +14,7 @@ const Header = () => {
     { label: "Services", target: "services" },
     { label: "Plans", target: "engagements" },
     { label: "Proof", target: "testimonials" },
+    { label: "FAQ", target: "faq" },
     { label: "Contact", target: "contact" },
   ];
 

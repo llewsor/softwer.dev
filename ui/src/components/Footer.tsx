@@ -8,6 +8,8 @@ const Footer = () => {
         <div className="flex gap-5">
           {[
             ["Services", "services"],
+            ["Locations", "locations"],
+            ["FAQ", "faq"],
             ["Process", "process"],
             ["Contact", "contact"],
           ].map(([label, target]) => (

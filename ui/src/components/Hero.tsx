@@ -23,12 +23,12 @@ const Hero = () => {
           </div>
 
           <h1 className="max-w-4xl text-5xl font-bold leading-tight tracking-normal text-zinc-950 dark:text-white md:text-6xl">
-            Software systems for companies that have outgrown spreadsheets, plugins, and duct tape.
+            Custom software development company for businesses that have outgrown spreadsheets, plugins, and duct tape.
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-700 dark:text-zinc-300">
-            softwer.dev designs, builds, and maintains custom web apps, integrations, dashboards, and internal systems that make business operations faster,
-            cleaner, and easier to scale.
+            softwer.dev designs, builds, and maintains custom web apps, SaaS products, integrations, dashboards, and internal systems that make business
+            operations faster, cleaner, and easier to scale.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials";
 import Engagements from "./components/Engagements";
 import Process from "./components/Process";
 import Footer from "./components/Footer";
+import SeoContent from "./components/SeoContent";
 
 function App() {
   // Read theme from localStorage on first render
@@ -33,6 +34,7 @@ function App() {
         <WhyUs />
         <Process />
         <Testimonials />
+        <SeoContent />
         <Contact />
       </main>
       <Footer />
