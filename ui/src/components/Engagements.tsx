@@ -30,13 +30,15 @@ const Engagements = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="bg-stone-50 px-4 py-20 dark:bg-zinc-950 lg:px-6"
+      className="bg-stone-50 px-4 py-20 dark:bg-zinc-700 lg:px-6"
     >
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-teal-700 dark:text-teal-300">How We Work</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-normal text-zinc-950 dark:text-white md:text-4xl">Flexible ways to bring senior software capability into your business.</h2>
+            <h2 className="mt-3 text-3xl font-bold tracking-normal text-zinc-950 dark:text-white md:text-4xl">
+              Flexible ways to bring senior software capability into your business.
+            </h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-zinc-700 dark:text-zinc-300">
             Every engagement starts with a practical conversation about goals, constraints, budget, timeline, and what success needs to look like.

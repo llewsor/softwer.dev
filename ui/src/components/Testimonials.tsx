@@ -37,7 +37,7 @@ const Testimonials = () => {
   return (
     <motion.section
       id="testimonials"
-      className="bg-stone-50 px-4 py-20 dark:bg-zinc-950 lg:px-6"
+      className="border-y border-zinc-200 bg-white px-4 py-20 dark:border-zinc-800 dark:bg-zinc-900 lg:px-6"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -54,12 +54,12 @@ const Testimonials = () => {
 
         <div className="mt-12 grid gap-4 lg:grid-cols-3">
           {caseStudies.map((study) => (
-            <article key={study.title} className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <article key={study.title} className="rounded-lg border border-zinc-200 bg-stone-50 p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
               <h3 className="text-xl font-semibold text-zinc-950 dark:text-white">{study.title}</h3>
               <p className="mt-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">{study.outcome}</p>
               <div className="mt-5 space-y-2">
                 {study.metrics.map((metric) => (
-                  <p key={metric} className="rounded-md bg-stone-100 px-3 py-2 text-sm font-medium text-zinc-800 dark:bg-zinc-950 dark:text-zinc-200">
+                  <p key={metric} className="rounded-md bg-white px-3 py-2 text-sm font-medium text-zinc-800 dark:bg-zinc-900 dark:text-zinc-200">
                     {metric}
                   </p>
                 ))}
@@ -72,7 +72,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
+              className="rounded-lg border border-zinc-200 bg-stone-50 p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}

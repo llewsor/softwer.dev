@@ -34,14 +34,6 @@ const Header = () => {
           </Link>
         </div>
 
-        <button
-          onClick={toggleTheme}
-          className="fixed bottom-4 right-4 rounded-md border border-zinc-300 bg-white p-2 text-zinc-900 shadow-sm transition hover:shadow-md dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
-          title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
-        >
-          {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-        </button>
-
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
             <Link
@@ -64,9 +56,25 @@ const Header = () => {
           >
             Book a Call
           </Link>
+          <button
+            onClick={toggleTheme}
+            className="rounded-md border border-zinc-300 bg-white p-2 text-zinc-900 shadow-sm transition hover:shadow-md dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
+            title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            aria-label={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
         </nav>
 
-        <div className="md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            onClick={toggleTheme}
+            className="rounded-md border border-zinc-300 bg-white p-2 text-zinc-900 shadow-sm transition hover:shadow-md dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
+            title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            aria-label={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
           <button onClick={toggleMenu} aria-label="Toggle Menu">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

@@ -12,7 +12,7 @@ const Hero = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true, amount: 0.3 }}
-      className="relative overflow-hidden border-b border-zinc-200 bg-white pt-28 dark:border-zinc-800 dark:bg-zinc-950"
+      className="relative overflow-hidden border-b border-zinc-200 bg-white pt-28 dark:border-zinc-800 dark:bg-zinc-900"
       id="hero"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-6 lg:pb-24">

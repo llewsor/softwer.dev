@@ -32,13 +32,15 @@ const About = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="bg-stone-50 px-4 py-20 dark:bg-zinc-950 lg:px-6"
+      className="bg-stone-50 px-4 py-20 dark:bg-zinc-700 lg:px-6"
     >
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-teal-700 dark:text-teal-300">Where We Help</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-normal text-zinc-950 dark:text-white md:text-4xl">The best projects start with a business bottleneck.</h2>
+            <h2 className="mt-3 text-3xl font-bold tracking-normal text-zinc-950 dark:text-white md:text-4xl">
+              The best projects start with a business bottleneck.
+            </h2>
             <p className="mt-5 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
               We work with owners, operators, and growing teams who need dependable software that removes friction from real workflows.
             </p>

@@ -59,7 +59,7 @@ const SeoContent = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.2 }}
-        className="border-y border-zinc-200 bg-white px-4 py-20 dark:border-zinc-800 dark:bg-zinc-900 lg:px-6"
+        className="border-y border-zinc-200 bg-stone-50 px-4 py-20 dark:border-zinc-800 dark:bg-zinc-700 lg:px-6"
       >
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
@@ -69,14 +69,14 @@ const SeoContent = () => {
                 A software development company built around useful business outcomes.
               </h2>
               <p className="mt-5 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
-                Companies usually search for a software partner when something important is blocked: a product needs to launch, systems need to connect,
-                staff are buried in admin, or legacy software needs attention.
+                Companies usually search for a software partner when something important is blocked: a product needs to launch, systems need to connect, staff
+                are buried in admin, or legacy software needs attention.
               </p>
             </div>
 
             <div className="grid gap-4">
               {servicePages.map((item) => (
-                <article key={item.title} className="rounded-lg border border-zinc-200 bg-stone-50 p-6 dark:border-zinc-800 dark:bg-zinc-950">
+                <article key={item.title} className="rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
                   <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-md bg-teal-50 text-teal-700 dark:bg-teal-950 dark:text-teal-200">
                     <CheckCircle2 className="h-6 w-6" />
                   </div>
@@ -87,14 +87,17 @@ const SeoContent = () => {
             </div>
           </div>
 
-          <div className="mt-12 rounded-lg border border-zinc-200 bg-stone-50 p-6 dark:border-zinc-800 dark:bg-zinc-950">
+          <div className="mt-12 rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
             <div className="flex items-center gap-3">
               <SearchCheck className="h-6 w-6 text-teal-700 dark:text-teal-300" />
               <h3 className="text-xl font-semibold text-zinc-950 dark:text-white">Relevant software development searches</h3>
             </div>
             <div className="mt-5 flex flex-wrap gap-2">
               {buyerKeywords.map((keyword) => (
-                <span key={keyword} className="rounded-md bg-white px-3 py-2 text-sm font-medium text-zinc-700 ring-1 ring-zinc-200 dark:bg-zinc-900 dark:text-zinc-300 dark:ring-zinc-800">
+                <span
+                  key={keyword}
+                  className="rounded-md bg-stone-50 px-3 py-2 text-sm font-medium text-zinc-700 ring-1 ring-zinc-200 dark:bg-zinc-950 dark:text-zinc-300 dark:ring-zinc-800"
+                >
                   {keyword}
                 </span>
               ))}
@@ -109,7 +112,7 @@ const SeoContent = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.2 }}
-        className="bg-stone-50 px-4 py-20 dark:bg-zinc-950 lg:px-6"
+        className="bg-white px-4 py-20 dark:bg-zinc-900 lg:px-6"
       >
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
@@ -118,11 +121,11 @@ const SeoContent = () => {
               Remote-first software development for Australia, Malta, and beyond.
             </h2>
           </div>
-          <div className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="rounded-lg border border-zinc-200 bg-stone-50 p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
             <MapPin className="h-7 w-7 text-teal-700 dark:text-teal-300" />
             <p className="mt-4 text-base leading-7 text-zinc-700 dark:text-zinc-300">
-              softwer.dev works with growing businesses across time zones through clear planning, regular delivery updates, and pragmatic technical support.
-              To strengthen local rankings, keep the same business name, website, service areas, and contact details across Google Business Profile, client
+              softwer.dev works with growing businesses across time zones through clear planning, regular delivery updates, and pragmatic technical support. To
+              strengthen local rankings, keep the same business name, website, service areas, and contact details across Google Business Profile, client
               directories, and partner listings.
             </p>
           </div>
@@ -135,16 +138,18 @@ const SeoContent = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.2 }}
-        className="border-t border-zinc-200 bg-white px-4 py-20 dark:border-zinc-800 dark:bg-zinc-900 lg:px-6"
+        className="border-t border-zinc-200 bg-stone-50 px-4 py-20 dark:border-zinc-800 dark:bg-zinc-700 lg:px-6"
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-teal-700 dark:text-teal-300">FAQ</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-normal text-zinc-950 dark:text-white md:text-4xl">Questions buyers ask before choosing a software development company.</h2>
+            <h2 className="mt-3 text-3xl font-bold tracking-normal text-zinc-950 dark:text-white md:text-4xl">
+              Questions buyers ask before choosing a software development company.
+            </h2>
           </div>
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {faqs.map((faq) => (
-              <article key={faq.question} className="rounded-lg border border-zinc-200 bg-stone-50 p-6 dark:border-zinc-800 dark:bg-zinc-950">
+              <article key={faq.question} className="rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
                 <h3 className="text-lg font-semibold text-zinc-950 dark:text-white">{faq.question}</h3>
                 <p className="mt-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">{faq.answer}</p>
               </article>
